@@ -1,4 +1,90 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+.navContainer{
+    position: fixed;
+    background: blue;
+    height: 10vh;
+    width: 100%;
+
+    ul{
+        display: flex;
+        /*   height: 10vh;   */
+        width: 100%;
+        align-items: center;
+        background: rgba(33, 40, 56, 0.85);
+        li{
+            list-style: none;
+            padding: .8rem;
+           
+        }
+    }
+
+    a{
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        color: white;
+
+        &:hover{
+            color: red;
+            cursor: pointer;
+        }
+    }
+
+    .navLogo{
+        flex: 1;
+        margin-left: 2rem;
+    }
+
+   
+}
+
+
+.landing{
+    min-height: 100vh;
+    border: 1px solid red;
+    background: #212838;
+}
+
+.about{
+    height: 100vh;
+    background: green;
+}
+
+
+@media screen and (max-width: 768px)
+{
+
+    .navContainer{}
+    ul{
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .navToggle{
+        display: block;
+        
+        &:hover{
+
+            cursor: pointer;
+            .bar3{
+                stroke: red;
+            }
+        }
+    }
+
+    .navLinks{
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navLinks.active{
+        display: block;
+        &:hover{
+            background: rgba(80, 105, 128, 0.25);
+        }
+    }
 }

@@ -1,5 +1,88 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navContainer {
+  position: fixed;
+  background: blue;
+  height: 10vh;
+  width: 100%;
+}
+
+.navContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*   height: 10vh;   */
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(33, 40, 56, 0.85);
+}
+
+.navContainer ul li {
+  list-style: none;
+  padding: .8rem;
+}
+
+.navContainer a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.navContainer a:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.navContainer .navLogo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 2rem;
+}
+
+.landing {
+  min-height: 100vh;
+  border: 1px solid red;
+  background: #212838;
+}
+
+.about {
+  height: 100vh;
+  background: green;
+}
+
+@media screen and (max-width: 768px) {
+  ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 100%;
+  }
+  .navToggle {
+    display: block;
+  }
+  .navToggle:hover {
+    cursor: pointer;
+  }
+  .navToggle:hover .bar3 {
+    stroke: red;
+  }
+  .navLinks {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .navLinks.active {
+    display: block;
+  }
+  .navLinks.active:hover {
+    background: rgba(80, 105, 128, 0.25);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
