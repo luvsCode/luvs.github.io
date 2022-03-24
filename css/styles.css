@@ -3,11 +3,21 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  -ms-overflow-style: none;
+  /*  IE & Edge  */
+  scrollbar-width: none;
+  /*  firefox  */
 }
 
+* ::-webkit-scrollbar {
+  display: none;
+}
+
+/*             ------------------------------   NAV BAR   ------------------------------            */
 .navContainer {
   position: fixed;
-  background: blue;
+  z-index: 999999;
   height: 10vh;
   width: 100%;
 }
@@ -16,12 +26,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*   height: 10vh;   */
+  height: 10vh;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: rgba(33, 40, 56, 0.85);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(33, 40, 56, 0.3);
 }
 
 .navContainer ul li {
@@ -29,14 +44,14 @@
   padding: .8rem;
 }
 
-.navContainer a {
+.navContainer ul li a {
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  color: white;
+  color: #eceef4;
 }
 
-.navContainer a:hover {
-  color: red;
+.navContainer ul li a:hover {
+  color: #d40f0f;
+  font-weight: bolder;
   cursor: pointer;
 }
 
@@ -47,42 +62,449 @@
   margin-left: 2rem;
 }
 
+.navContainer .navToggle {
+  display: none;
+}
+
+/*             ------------------------------   Landing section   ------------------------------            */
 .landing {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   min-height: 100vh;
-  border: 1px solid red;
   background: #212838;
 }
 
-.about {
-  height: 100vh;
-  background: green;
+.landing .mainTxt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #4d5d83;
 }
 
+.landing .mainTxt h1 {
+  font-size: 5rem;
+  font-family: 'Walter Turncoat', cursive;
+}
+
+.landing .mainTxt p {
+  margin-top: .8rem;
+  color: #eceef4;
+}
+
+.landing .mainTxt .mainBtn {
+  background: #4d5d83;
+  color: #eceef4;
+  border-radius: 0.4rem;
+  border-style: none;
+  padding: 1rem 2rem;
+  margin: 1.5rem;
+}
+
+.landing .mainTxt .mainBtn:hover {
+  background: #d40f0f;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px #d40f0f, 0 0 25px #d40f0f;
+          box-shadow: 0 0 5px #d40f0f, 0 0 25px #d40f0f;
+}
+
+.landing .mainSvg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*             ------------------------------   About section   ------------------------------            */
+.about {
+  height: 100vh;
+  background: #eceef4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .aboutTxt {
+  text-align: center;
+  width: 65vw;
+  height: 50vh;
+  color: #eceef4;
+  background: rgba(33, 40, 56, 0.85);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(33, 40, 56, 0.3);
+  border-radius: 0.8rem;
+}
+
+/*             ------------------------------   Project section   ------------------------------            */
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.project .projContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 2rem;
+  background: #eceef4;
+}
+
+.project .projCard {
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+  margin: 1rem;
+  z-index: 99;
+  color: #eceef4;
+  background: rgba(33, 40, 56, 0.85);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(33, 40, 56, 0.3);
+  border-radius: 0.8rem;
+}
+
+.project .projCard .projBtn {
+  background: #4d5d83;
+  color: #eceef4;
+  border-radius: 0.4rem;
+  border-style: none;
+  padding: 0.8rem 2rem;
+  margin: 1rem;
+}
+
+.project .projCard .projBtn:hover {
+  background: #d40f0f;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px #d40f0f, 0 0 25px #d40f0f;
+          box-shadow: 0 0 5px #d40f0f, 0 0 25px #d40f0f;
+}
+
+.project .svgContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.project .svgContainer .bgCircles1 {
+  margin-left: 1.5rem;
+}
+
+.project .svgContainer .bgCircles2 {
+  margin-right: 1.5rem;
+}
+
+/*             ------------------------------   Project section   ------------------------------            */
+.contact {
+  height: 90vh;
+  background: #212838;
+}
+
+.contact .formContainer {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50vw;
+  height: 50vh;
+  border-radius: 2rem;
+  padding: 2rem 3rem;
+  color: #eceef4;
+  background: rgba(33, 40, 56, 0.85);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(33, 40, 56, 0.3);
+}
+
+.contact form .leftBox {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 2rem;
+}
+
+.contact form .leftBox .title {
+  color: #4d5d83;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Walter Turncoat', cursive;
+}
+
+.contact form .leftBox p {
+  margin-bottom: 3rem;
+}
+
+.contact form .input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: rgba(236, 238, 244, 0.51);
+  border-radius: 2px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.contact form .placeHolder {
+  pointer-events: none;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+  opacity: 0.6rem;
+}
+
+.contact form textarea {
+  background: rgba(236, 238, 244, 0.51);
+  border-radius: 2px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  resize: none;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.contact form .contactBtn {
+  background: #4d5d83;
+  color: #eceef4;
+  border-radius: 0.4rem;
+  border-style: none;
+  padding: 0.8rem 2rem;
+  margin: 1rem;
+  margin-left: 35%;
+}
+
+.contact form .contactBtn:hover {
+  background: #d40f0f;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px #d40f0f, 0 0 25px #d40f0f;
+          box-shadow: 0 0 5px #d40f0f, 0 0 25px #d40f0f;
+}
+
+/*             ------------------------------   Project section   ------------------------------            */
+.footContainer {
+  height: 10vh;
+  width: 100%;
+}
+
+.footContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  background: #212838;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(33, 40, 56, 0.3);
+}
+
+.footContainer ul li {
+  list-style: none;
+  padding: 0.5rem;
+  opacity: 0.7;
+}
+
+.footContainer ul li a {
+  text-decoration: none;
+  color: #eceef4;
+}
+
+.footContainer ul .footCopy {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 2rem;
+}
+
+.footContainer ul .socials:hover {
+  fill: #d40f0f;
+}
+
+/*             ------------------------------   Mobile and Tablet view   ------------------------------            */
 @media screen and (max-width: 768px) {
-  ul {
+  /*             ------------------------------   Mobile Navigation   ------------------------------            */
+  .navContainer {
+    position: fixed;
+  }
+  .navContainer ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     height: 100%;
   }
-  .navToggle {
+  .navContainer .navToggle {
     display: block;
   }
-  .navToggle:hover {
+  .navContainer .navToggle:hover {
     cursor: pointer;
   }
-  .navToggle:hover .bar3 {
-    stroke: red;
+  .navContainer .navToggle:hover .bar3 {
+    stroke: #d40f0f;
   }
-  .navLinks {
+  .navContainer .navLinks {
     display: none;
     width: 100%;
     text-align: center;
   }
-  .navLinks.active {
+  .navContainer .navLinks.active {
     display: block;
   }
-  .navLinks.active:hover {
+  .navContainer .navLinks.active:hover {
     background: rgba(80, 105, 128, 0.25);
   }
+  /*             ------------------------------   Mobile Landing view   ------------------------------            */
+  .landing {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 40% auto;
+        grid-template-rows: 40% auto;
+  }
+  .landing .mainSvg {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .landing .mainSvg .cpuPhone {
+    width: 400px;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+  }
+  /*             ------------------------------   Mobile About view   ------------------------------            */
+  /*             ------------------------------   Mobile Project view   ------------------------------            */
+  .projContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /*             ------------------------------   Mobile Project view   ------------------------------            */
+  .formContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .formContainer form {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .formContainer form .leftBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  /*             ------------------------------   Mobile Project view   ------------------------------            */
 }
 /*# sourceMappingURL=styles.css.map */
