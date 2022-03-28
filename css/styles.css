@@ -68,10 +68,15 @@
 
 /*             ------------------------------   Landing section   ------------------------------            */
 .landing {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   min-height: 100vh;
   min-width: 100vw;
   background: #212838;
@@ -92,7 +97,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #4d5d83;
+  color: #eceef4;
 }
 
 .landing .mainTxt h1 {
@@ -102,6 +107,7 @@
 
 .landing .mainTxt p {
   margin-top: .8rem;
+  font-weight: 500;
   color: #eceef4;
 }
 
@@ -486,19 +492,16 @@
   }
   /*             ------------------------------   Mobile Landing view   ------------------------------            */
   .landing {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 40% auto;
-        grid-template-rows: 40% auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
-  .landing .mainSvg {
-    -ms-grid-row: 1;
-    grid-row: 1;
-  }
-  .landing .mainSvg .cpuPhone {
+  .landing .cpuPhone {
     width: 400px;
-    -ms-flex-item-align: baseline;
-        align-self: baseline;
+  }
+  .landing .mainBtn {
+    margin-bottom: 2rem;
   }
   /*             ------------------------------   Mobile About view   ------------------------------            */
   /*             ------------------------------   Mobile Project view   ------------------------------            */
@@ -515,7 +518,6 @@
   }
   .formContainer form {
     height: 100%;
-    border: 2px solid red;
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
