@@ -7,8 +7,10 @@ const tl = gsap.timeline({defaults: {duration: 0.75, ease: 'Power2.easeOut'}})
 
 tl.fromTo('.mainTxt', {opacity: 0}, {opacity: 1, duration: 2.5})
 tl.fromTo('.bgCircles', {y:0}, {y:-20, yoyo: true, repeat: -1, duration: 0.75}, "<")
-tl.fromTo('.bgCircles1', {y:0}, {y:-50, yoyo: true, repeat: -1, duration: 0.75}, "<")
-tl.fromTo('.bgCircles2', {y:0}, {y:-50, yoyo: true, repeat: -1, duration: 0.75}, "<")
+tl.fromTo('.bgCircles1', {y:50}, {y:-100, yoyo: true, repeat: -1, duration: 0.75}, "<")
+tl.fromTo('.bgCircles2', {y:50}, {y:-100, yoyo: true, repeat: -1, duration: 0.75}, "<")
+tl.fromTo('.bgCircles5', {y:50}, {y:-100, yoyo: true, repeat: -1, duration: 0.75}, "<")
+tl.fromTo('.bgCircles6', {y:50}, {y:-100, yoyo: true, repeat: -1, duration: 0.75}, "<")
 tl.to('.cpuSqr', {scale: 2, yoyo: true, repeat: -1}, '<')
 tl.to('.phnSqr',{scale: 2, yoyo: true, repeat: -1}, '<')
 
