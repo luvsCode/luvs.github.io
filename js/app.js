@@ -5,6 +5,11 @@ const form = document.querySelector('form');
 const containers = document.querySelectorAll('.inputContainer');
 const tl = gsap.timeline({defaults: {duration: 0.75, ease: 'Power2.easeOut'}})
 
+let vw = window.innerWidth * 0.01;
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vw', `${vw}px`);
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 tl.fromTo('.mainTxt', {opacity: 0}, {opacity: 1, duration: 2.5})
 tl.fromTo('.bgCircles', {y:0}, {y:-20, yoyo: true, repeat: -1, duration: 0.75}, "<")
 tl.fromTo('.bgCircles1', {y:50}, {y:-100, yoyo: true, repeat: -1, duration: 0.75}, "<")
