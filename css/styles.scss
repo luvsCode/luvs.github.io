@@ -23,6 +23,7 @@
         display: flex;
         height: 10vh;   
         width: 100vw;
+        
         align-items: center;
         background: rgba(33, 40, 56, 0.85);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -32,6 +33,7 @@
         li{
             list-style: none;
             padding: .8rem;
+            margin-right: 1rem;
            
             a{
                 text-decoration: none;
@@ -102,6 +104,7 @@
             border-style: none;
             padding: 1rem 2rem;
             margin: 1.5rem;
+            margin-bottom: 2rem;
             &:hover{
                 background: #d40f0f;
                 font-weight: 500;
@@ -127,7 +130,7 @@
 
 /*             ------------------------------   About section   ------------------------------            */
 .about{
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     background: #eceef4;
     display: flex;
@@ -135,9 +138,9 @@
     align-items: center;
     
     .aboutTxt{
-        text-align: center;
-        width: 60vw;
-        height: 40vh;
+        align-items: center;
+        width: 800px;
+        height: 400px;
         color: #eceef4;
        background: rgba(33, 40, 56, 0.85);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -146,6 +149,19 @@
         border: 1px solid rgba(33, 40, 56, 0.3);
         border-radius: 0.8rem;
         z-index: 99;
+
+        h2{
+            padding: 2rem;
+            text-align: center;
+        }
+
+        p{
+        
+            text-align: left;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            line-height: 2;
+        }
         
     }
 
@@ -174,7 +190,7 @@
     
     .projContainer{
     display: flex;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
@@ -380,6 +396,7 @@
                 list-style: none;
                 padding: 0.5rem;
                 opacity: 0.7;
+                margin-right: 1rem;
                 
                 a{
                     text-decoration: none;
@@ -454,13 +471,15 @@
                 width: 400px;
   
             }
-            .mainBtn{
-                margin-bottom: 2rem;
-            }
+            
         
      }
       /*             ------------------------------   Mobile About view   ------------------------------            */
  
+      .aboutTxt{
+          width: 40vw;
+          height: 60vh;
+      }
       
        /*             ------------------------------   Mobile Project view   ------------------------------            */
  

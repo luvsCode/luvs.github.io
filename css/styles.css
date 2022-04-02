@@ -42,6 +42,7 @@
 .navContainer ul li {
   list-style: none;
   padding: .8rem;
+  margin-right: 1rem;
 }
 
 .navContainer ul li a {
@@ -118,6 +119,7 @@
   border-style: none;
   padding: 1rem 2rem;
   margin: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .landing .mainTxt .mainBtn:hover {
@@ -146,7 +148,7 @@
 
 /*             ------------------------------   About section   ------------------------------            */
 .about {
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   background: #eceef4;
   display: -webkit-box;
@@ -161,9 +163,11 @@
 }
 
 .about .aboutTxt {
-  text-align: center;
-  width: 60vw;
-  height: 40vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 800px;
+  height: 400px;
   color: #eceef4;
   background: rgba(33, 40, 56, 0.85);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -173,6 +177,18 @@
   border: 1px solid rgba(33, 40, 56, 0.3);
   border-radius: 0.8rem;
   z-index: 99;
+}
+
+.about .aboutTxt h2 {
+  padding: 2rem;
+  text-align: center;
+}
+
+.about .aboutTxt p {
+  text-align: left;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  line-height: 2;
 }
 
 .about .svgContainer {
@@ -210,7 +226,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -443,6 +459,7 @@
   list-style: none;
   padding: 0.5rem;
   opacity: 0.7;
+  margin-right: 1rem;
 }
 
 .footContainer ul li a {
@@ -503,10 +520,11 @@
   .landing .cpuPhone {
     width: 400px;
   }
-  .landing .mainBtn {
-    margin-bottom: 2rem;
-  }
   /*             ------------------------------   Mobile About view   ------------------------------            */
+  .aboutTxt {
+    width: 40vw;
+    height: 60vh;
+  }
   /*             ------------------------------   Mobile Project view   ------------------------------            */
   .projContainer {
     -webkit-box-orient: vertical;
