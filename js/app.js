@@ -5,6 +5,17 @@ const form = document.querySelector('form');
 const containers = document.querySelectorAll('.inputContainer');
 const tl = gsap.timeline({defaults: {duration: 0.75, ease: 'Power2.easeOut'}})
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./serviceWorker.js')
+    .then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+}
+
 let vw = window.innerWidth * 0.01;
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vw', `${vw}px`);
@@ -30,10 +41,10 @@ toggleButton.addEventListener('click', () =>
 
 containers.forEach((container) =>{
 
-  const input = container.querySelector('.input');
+  const input = container.querySelector('input');
   const line = container.querySelector(".elastic-line");
   const placeholder = container.querySelector('.placeHolder');
-  const inputName = container.querySelector('.inputName'); 
+ // const inputName = container.querySelector('.inputName'); 
   //check for text input
          //validation
 

@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     
     ::-webkit-scrollbar
     {
@@ -73,7 +73,7 @@
     //grid-template-columns: 1fr 1fr;
     height: 100vh;
     width: 100vw;
-    
+    padding: 2rem;
     
     
     background: #212838;
@@ -85,15 +85,16 @@
         text-align: center;
         justify-content: center;
         color: #eceef4;
-
+        //margin-right: 5rem;
+        //border: 1px solid red;
         h1{
-            font-size: 5rem;
-            font-family: 'Walter Turncoat', cursive;
+            font-size: 4rem;
+            font-family: 'Poppins', sans-serif;
+            //Molle   Nuito     Concert One
         }
 
         p{
-            margin-top: .8rem;
-            font-weight: 500;
+            margin-right: 2rem;
             color: #eceef4;
         }
 
@@ -102,7 +103,7 @@
             color: #eceef4;
             border-radius: 0.4rem;
             border-style: none;
-            padding: 1rem 2rem;
+            padding: .8rem 1.5rem;
             margin: 1.5rem;
             margin-bottom: 2rem;
             &:hover{
@@ -120,11 +121,11 @@
         align-items: center;
         justify-content: center;
 
-        .hoverCircle{
-            &:hover{
-                fill: #d40f0f;
-            }
-        }
+       // .hoverCircle{
+          //  &:hover{
+               // fill: #d40f0f;
+           // }
+       // }
     }
 }
 
@@ -276,8 +277,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 70vw;
-        height: 60vh;
+        //width: 70vw;
+        //height: 60vh;
         border-radius: 2rem;
         padding: 2rem 3rem;
         color: #eceef4;
@@ -302,7 +303,7 @@
                 margin-bottom: 3rem;
                 text-align: center;
                 font-size: 3rem;
-                font-family: 'Walter Turncoat', cursive;
+                font-family: 'Poppins', sans-serif;
             }
 
             p{
@@ -310,7 +311,9 @@
             }
         }
 
-        
+        .rightBox{
+            height: 100%;
+        }
         
 
         .input{
@@ -418,8 +421,10 @@
         }
 }
 
+
 /*             ------------------------------   Mobile and Tablet view   ------------------------------            */
-@media screen and (max-width: 860px)
+@media screen and (min-width: 320px) and (max-width: 860px)
+//@media  only screen and (min-device-width : 320px) and (max-device-width : 860px)
 {
     
 
@@ -464,11 +469,12 @@
      .landing{
          //grid-template-columns: 1fr;
          //grid-template-rows: 40% auto;
-         overflow: auto;
+         //overflow: auto;
          flex-direction: column-reverse;
+         
 
             .cpuPhone{
-                width: 400px;
+                width: 300px;
   
             }
             
@@ -501,6 +507,7 @@
                flex-direction: column;
                    align-items: center;
                    justify-content: center;
+                   border-radius: 0;
                
                .leftBox{
                    display: flex;
