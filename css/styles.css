@@ -4,6 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
   -ms-overflow-style: none;
   /*  IE & Edge  */
   scrollbar-width: none;
@@ -18,8 +19,8 @@
 .navContainer {
   position: fixed;
   z-index: 999999;
-  height: 10vh;
-  width: 100vw;
+  min-height: 10vh;
+  min-width: 100vw;
 }
 
 .navContainer ul {
@@ -27,7 +28,7 @@
   display: -ms-flexbox;
   display: flex;
   height: 10vh;
-  width: 100vw;
+  min-width: 100vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -42,7 +43,8 @@
 .navContainer ul li {
   list-style: none;
   padding: .8rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  font-size: 2rem;
 }
 
 .navContainer ul li a {
@@ -78,9 +80,10 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 100vh;
-  width: 100vw;
-  padding: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
+  min-width: 100vw;
   background: #212838;
 }
 
@@ -103,13 +106,15 @@
 }
 
 .landing .mainTxt h1 {
-  font-size: 4rem;
+  font-size: 8rem;
   font-family: 'Poppins', sans-serif;
 }
 
 .landing .mainTxt p {
   margin-right: 2rem;
+  padding: .8rem;
   color: #eceef4;
+  font-size: 1.2rem;
 }
 
 .landing .mainTxt .mainBtn {
@@ -120,6 +125,7 @@
   padding: .8rem 1.5rem;
   margin: 1.5rem;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
 .landing .mainTxt .mainBtn:hover {
@@ -144,8 +150,8 @@
 
 /*             ------------------------------   About section   ------------------------------            */
 .about {
-  height: 80vh;
-  width: 100vw;
+  min-height: 80vh;
+  min-width: 100vw;
   background: #eceef4;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,6 +184,7 @@
 .about .aboutTxt h2 {
   padding: 2rem;
   text-align: center;
+  font-size: 3rem;
 }
 
 .about .aboutTxt p {
@@ -185,6 +192,7 @@
   margin-bottom: 1rem;
   padding-left: 1rem;
   line-height: 2;
+  font-size: 1.2rem;
 }
 
 .about .svgContainer {
@@ -215,15 +223,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
+  min-height: 90vh;
 }
 
 .project .projContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 90vh;
-  width: 100%;
+  min-height: 90vh;
+  min-width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -261,6 +269,14 @@
   transition: 0.2s;
 }
 
+.project .projCard h3 {
+  font-size: 2rem;
+}
+
+.project .projCard p {
+  font-size: 1.2rem;
+}
+
 .project .projCard .projBtn {
   background: #4d5d83;
   color: #eceef4;
@@ -268,6 +284,7 @@
   border-style: none;
   padding: 0.8rem 2rem;
   margin: 1rem;
+  font-size: 1rem;
 }
 
 .project .projCard .projBtn:hover {
@@ -345,6 +362,7 @@
 .contact form .leftBox {
   height: 100%;
   width: 50%;
+  font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,7 +411,7 @@
 .contact form .placeHolder {
   pointer-events: none;
   padding: 0.3rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   opacity: 0.6rem;
 }
 
@@ -418,6 +436,7 @@
   padding: 0.8rem 2rem;
   margin: 1rem;
   margin-left: 35%;
+  font-size: 1rem;
 }
 
 .contact form .contactBtn:hover {
@@ -430,8 +449,8 @@
 
 /*             ------------------------------   Project section   ------------------------------            */
 .footContainer {
-  height: 10vh;
-  width: 100vw;
+  min-height: 10vh;
+  min-width: 100vw;
   background: #212838;
 }
 
@@ -458,6 +477,7 @@
   padding: 0.5rem;
   opacity: 0.7;
   margin-right: 1rem;
+  font-size: 1.2rem;
 }
 
 .footContainer ul li a {
@@ -477,7 +497,7 @@
 }
 
 /*             ------------------------------   Mobile and Tablet view   ------------------------------            */
-@media screen and (min-width: 320px) and (max-width: 860px) {
+@media screen and (max-width: 860px) {
   /*             ------------------------------   Mobile Navigation   ------------------------------            */
   .navContainer {
     position: fixed;
@@ -503,16 +523,25 @@
   }
   .navContainer .navLinks.active {
     display: block;
+    margin: 0;
   }
   .navContainer .navLinks.active:hover {
     background: rgba(80, 105, 128, 0.25);
   }
   /*             ------------------------------   Mobile Landing view   ------------------------------            */
   .landing {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .landing .mainTxt h1 {
+    font-size: 5rem;
   }
   .landing .cpuPhone {
     width: 300px;

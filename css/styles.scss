@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
     
     ::-webkit-scrollbar
     {
@@ -11,18 +12,20 @@
     -ms-overflow-style: none; /*  IE & Edge  */
     scrollbar-width: none; /*  firefox  */
 }
+
+
 /*             ------------------------------   NAV BAR   ------------------------------            */
 .navContainer{
     position: fixed;
     z-index: 999999;
-    height: 10vh;
-    width: 100vw;
+    min-height: 10vh;
+    min-width: 100vw;
     
 
     ul{
         display: flex;
         height: 10vh;   
-        width: 100vw;
+        min-width: 100vw;
         
         align-items: center;
         background: rgba(33, 40, 56, 0.85);
@@ -33,11 +36,13 @@
         li{
             list-style: none;
             padding: .8rem;
-            margin-right: 1rem;
+            margin-right: 2rem;
+            font-size: 2rem;
            
             a{
                 text-decoration: none;
                 color: #eceef4;
+                
         
                 &:hover{
                     color: #d40f0f;
@@ -69,11 +74,12 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     //display: grid;
     //grid-template-columns: 1fr 1fr;
-    height: 100vh;
-    width: 100vw;
-    padding: 2rem;
+    min-height: 100vh;
+    min-width: 100vw;
+    
     
     
     background: #212838;
@@ -88,14 +94,16 @@
         //margin-right: 5rem;
         //border: 1px solid red;
         h1{
-            font-size: 4rem;
+            font-size: 8rem;
             font-family: 'Poppins', sans-serif;
             //Molle   Nuito     Concert One
         }
 
         p{
             margin-right: 2rem;
+            padding: .8rem;
             color: #eceef4;
+            font-size: 1.2rem;
         }
 
         .mainBtn{
@@ -106,6 +114,7 @@
             padding: .8rem 1.5rem;
             margin: 1.5rem;
             margin-bottom: 2rem;
+            font-size: 1.2rem;
             &:hover{
                 background: #d40f0f;
                 font-weight: 500;
@@ -131,8 +140,8 @@
 
 /*             ------------------------------   About section   ------------------------------            */
 .about{
-    height: 80vh;
-    width: 100vw;
+    min-height: 80vh;
+    min-width: 100vw;
     background: #eceef4;
     display: flex;
     justify-content: center;
@@ -154,6 +163,7 @@
         h2{
             padding: 2rem;
             text-align: center;
+            font-size: 3rem;
         }
 
         p{
@@ -162,6 +172,7 @@
             margin-bottom: 1rem;
             padding-left: 1rem;
             line-height: 2;
+            font-size: 1.2rem;
         }
         
     }
@@ -187,12 +198,12 @@
 /*             ------------------------------   Project section   ------------------------------            */
 .project{
     display: flex;
-    height: 100%;
+    min-height: 90vh;
     
     .projContainer{
     display: flex;
-    height: 90vh;
-    width: 100%;
+    min-height: 90vh;
+    min-width: 100%;
     align-items: center;
     justify-content: space-evenly;
     padding: 2rem;
@@ -221,6 +232,14 @@
             transition: 0.2s;
         }
 
+        h3{
+            font-size: 2rem;
+        }
+
+        p{
+            font-size: 1.2rem;
+        }
+
         .projBtn{
             background: #4d5d83;
             color: #eceef4;
@@ -228,6 +247,7 @@
             border-style: none;
             padding: 0.8rem 2rem;
             margin: 1rem;
+            font-size: 1rem;
             &:hover{
                 background: #d40f0f;
                 font-weight: 500;
@@ -291,6 +311,7 @@
             
             height: 100%;
             width: 50%;
+            font-size: 2rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -337,7 +358,7 @@
            
             pointer-events: none;
             padding: 0.3rem;
-            font-size: 0.8rem;
+            font-size: 1rem;
             opacity: 0.6rem;
             
             
@@ -364,6 +385,7 @@
             padding: 0.8rem 2rem;
             margin: 1rem;
             margin-left: 35%;
+            font-size: 1rem;
             &:hover{
                 background: #d40f0f;
                 font-weight: 500;
@@ -379,8 +401,8 @@
 
 /*             ------------------------------   Project section   ------------------------------            */
 .footContainer{
-    height: 10vh;
-    width: 100vw;
+    min-height: 10vh;
+    min-width: 100vw;
     background: #212838;
 
     ul{
@@ -400,7 +422,7 @@
                 padding: 0.5rem;
                 opacity: 0.7;
                 margin-right: 1rem;
-                
+                font-size: 1.2rem;
                 a{
                     text-decoration: none;
                     color: #eceef4;
@@ -423,8 +445,10 @@
 
 
 /*             ------------------------------   Mobile and Tablet view   ------------------------------            */
-@media screen and (min-width: 320px) and (max-width: 860px)
-//@media  only screen and (min-device-width : 320px) and (max-device-width : 860px)
+@media screen and (max-width: 860px)
+//@media screen and (min-device-width : 320px) and (max-device-width : 920px), (orientation: landscape)
+//@media screen and (device-width : 860px), (orientation: landscape)
+
 {
     
 
@@ -457,6 +481,7 @@
 
         .navLinks.active{
             display: block;
+            margin: 0;
             &:hover{
                 background: rgba(80, 105, 128, 0.25);
             }
@@ -470,9 +495,18 @@
          //grid-template-columns: 1fr;
          //grid-template-rows: 40% auto;
          //overflow: auto;
+         justify-content: center;
+         flex-wrap: wrap;
          flex-direction: column-reverse;
-         
 
+         .mainTxt{
+          
+             h1{
+               
+                 font-size: 5rem;
+             }
+         }
+        
             .cpuPhone{
                 width: 300px;
   
