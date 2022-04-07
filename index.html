@@ -71,7 +71,7 @@
             <p>A Front-end Web Developer creating intuitive and responsive web applications.</p>
             
             <button class="mainBtn">
-                Contact Me
+                Learn More
             </button>
         </div>
 
@@ -148,9 +148,16 @@
 
     <section class="about" id="aboutLink">
 
-        <div class="aboutTxt">
-            <h2>About Me</h2>
-            <p>Hello. My name is Adrian McCarthy, A self taught freelance developer who is striving to build immersive web applications through carefully crafted code. With a "knowledge is wealth" affirmation and a passion for problem solving in this constantly changing space I ensure you a modern up-to-date project.</p>
+        <div class="aboutContainer">
+        <div class="aboutCard">
+            <img src="./img/profilePic2.png" alt="profile picture" width="100px" height="150px">
+           <div class="aboutCardTxt">
+            <h1>Hello, I'm Adrian McCarthy</h1>
+            
+            <p>A self taught freelance developer based in Toronto. I specialise in creating responsive and functional web applications using Javascript, HTML, and CSS. Most recently, I have been striving to learn web 3.0 and build immersive applications onto a blockchain.</p>
+        
+           </div>
+        </div>    
         </div>
 
         <div class="svgContainer">
@@ -193,19 +200,19 @@
 
         <div class="projContainer">
             <div class="projCard">
-                <h3>Elemental Bets</h3>
+                <h2>Elemental Bets</h3>
                 <p>wager your points and bet on either Earth, Fire, or Water.</p>
                 <button class="projBtn">view</button>
             </div>
     
             <div class="projCard">
-                <h3>project name two</h3>
+                <h2>project name two</h3>
                 <p>description about project</p>
                 <button class="projBtn">view</button>
             </div>
     
             <div class="projCard">
-                <h3>project name three</h3>
+                <h2>project name three</h3>
                 <p>COMING SOON</p>
                 <button class="projBtn">view</button>
             </div>
@@ -258,32 +265,33 @@
     
                 <div class="rightBox">
                     <div class="inputContainer">
-                        <p class="placeHolder">Your Name</p>
-                        <input type="text" name="name" autocomplete="off" class="inputName input" required spellcheck="true">
+                        
+                        <label for="nameBox" class="placeHolder">Your Name:</label>
+                        <input id="nameBox" type="text" name="name" autocomplete="off" class="inputName input" required spellcheck="true">
                         <svg class="line-svg" width="100%" height="3" viewBox="0 0 300 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="elastic-line" d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512" stroke="#212838" stroke-width="2"/>
                         </svg>
                     </div>
     
                     <div class="inputContainer">
-                        <p class="placeHolder">Your Email</p>
-                        <input type="email" name="email" autocomplete="off" class="inputEmail input" required spellcheck="true">
+                        <label for="emailBox" class="placeHolder">Your Email:</label>
+                        <input id="emailBox" type="email" name="email" autocomplete="off" class="inputEmail input" required spellcheck="true">
                         <svg class="line-svg" width="100%" height="3" viewBox="0 0 300 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="elastic-line" d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512" stroke="#212838" stroke-width="2"/>
                         </svg>
                     </div>
     
                     <div class="inputContainer">
-                        <p class="placeHolder">Your Number</p>
-                        <input type="tel" name="tel" autocomplete="off" class="inputNumber input" required>
+                        <label for="phoneBox" class="placeHolder">Your Phone number:</label>
+                        <input id="phoneBox" type="tel" name="tel" autocomplete="off" class="inputNumber input" required>
                         <svg class="line-svg" width="100%" height="3" viewBox="0 0 300 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="elastic-line" d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512" stroke="#212838" stroke-width="2"/>
                         </svg>
                     </div>
 
                     <div>
-                        <p class="placeHolder">Your Message</p>
-                        <textarea rows="4" cols="50" type="text" name="comment" required spellcheck="true">
+                        <label for="messageBox" class="placeHolder">Your Message:</label>
+                        <textarea id="messageBox" rows="4" cols="50" type="text" name="comment" required spellcheck="true">
                             </textarea> 
                     </div>
 
@@ -300,7 +308,7 @@
     <footer>
         <div class="footContainer">
             <ul>
-                <li class="footCopy"><a href="#">CopyRight</a></li>
+                <li class="footCopy"><a href="#">Made by: Adrian McCarthy</a></li>
     
                 <li class="footLinks"><a target="blank" href="https://twitter.com/luvscoding">
                     
