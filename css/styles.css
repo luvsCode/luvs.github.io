@@ -3,7 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-size: 62.5%;
   -ms-overflow-style: none;
   /*  IE & Edge  */
@@ -95,10 +95,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+  text-align: left;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -106,17 +103,20 @@
 }
 
 .landing .mainTxt h1 {
-  font-size: 9rem;
-  font-family: 'Poppins', sans-serif;
+  font-size: 6.5rem;
+  padding: 1rem;
+  text-align: center;
 }
 
-.landing .mainTxt p {
-  padding: .8rem;
+.landing .mainTxt h2 {
+  line-height: 1.5;
+  padding: 1rem;
   color: #eceef4;
-  font-size: 1.3rem;
+  font-size: 2.5rem;
 }
 
 .landing .mainTxt .mainBtn {
+  display: none;
   background: #4d5d83;
   color: #eceef4;
   border-radius: 0.4rem;
@@ -157,6 +157,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -164,81 +168,118 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem;
+  /*
+   
+    .aboutContainer{
+        align-items: center;
+        width: 450px;
+        height: 400px;
+        color: #212838;
+       background: rgba(236, 238, 244, 0.85);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(236, 238, 244, 0.3);
+        border-radius: 0.8rem;
+        z-index: 99;
+        
+       .aboutCard{
+           height: 100%;
+           display: flex;
+           flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+           img{
+               width: 100px;
+               height: 150px;
+               border-radius: 0.8rem;
+               //border: 1px dotted red;
+              // margin-top: 5rem;
+              display: none;
+           }
+        .aboutCardTxt{
+
+            //border: 1px dotted red;
+            h1{
+                //padding: 2rem;
+               text-align: center;
+                font-size: 2rem;
+                font-weight: 300;
+            }
+    
+            p{
+            
+                text-align: left;
+                padding: 2rem;
+                line-height: 2;
+                font-size: 1.2rem;
+            }
+        }
+       }
+        
+    }
+
+    .svgContainer{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .bgCircles5{
+            display: none;
+            margin-left: 1.5rem;
+        }
+        .bgCircles6{
+            display: none;
+            margin-right: 1.5rem;
+        }
+
+    }
+
+   */
 }
 
-.about .aboutContainer {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 450px;
-  height: 400px;
-  color: #212838;
-  background: rgba(236, 238, 244, 0.85);
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(236, 238, 244, 0.3);
-  border-radius: 0.8rem;
-  z-index: 99;
+.about .aboutTitle {
+  width: 100%;
 }
 
-.about .aboutContainer .aboutCard {
-  height: 100%;
+.about .aboutTitle h1 {
+  font-size: 3rem;
+  margin: 2rem;
+}
+
+.about img {
+  display: none;
+}
+
+.about .svgContainer {
+  display: none;
+}
+
+.about .aboutTxt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 3rem;
 }
 
-.about .aboutContainer .aboutCard img {
-  width: 100px;
-  height: 150px;
-  border-radius: 0.8rem;
+.about .aboutTxt h1 {
+  font-size: 3rem;
 }
 
-.about .aboutContainer .aboutCard .aboutCardTxt h1 {
-  text-align: center;
+.about .aboutTxt p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   font-size: 2rem;
-  font-weight: 300;
-}
-
-.about .aboutContainer .aboutCard .aboutCardTxt p {
-  text-align: left;
-  padding: 2rem;
   line-height: 2;
-  font-size: 1.2rem;
-}
-
-.about .svgContainer {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.about .svgContainer .bgCircles5 {
-  margin-left: 1.5rem;
-}
-
-.about .svgContainer .bgCircles6 {
-  margin-right: 1.5rem;
 }
 
 /*             ------------------------------   Project section   ------------------------------            */
@@ -253,21 +294,56 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 90vh;
   min-width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  background: #eceef4;
+}
+
+.project .projContainer .projTxt {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.project .projContainer .projTxt h1 {
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.project .projContainer .projTxt h1, .project .projContainer .projTxt p {
+  margin: 2rem;
+}
+
+.project .projContainer .projTxt p {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.project .projContainer .cardContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 2rem;
-  background: #eceef4;
 }
 
-.project .projCard {
-  width: 350px;
-  height: 200px;
+.project .projContainer .cardContainer .projCard {
+  width: 500px;
+  height: 300px;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -283,24 +359,24 @@
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(236, 238, 244, 0.3);
   border-radius: 0.8rem;
+  /*
+             &:hover{
+                 height: 300px;
+                 width: 400px;
+                 transition: 0.2s;
+             }
+             */
 }
 
-.project .projCard:hover {
-  height: 300px;
-  width: 400px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.project .projCard h2 {
+.project .projContainer .cardContainer .projCard h2 {
   font-size: 2rem;
 }
 
-.project .projCard p {
+.project .projContainer .cardContainer .projCard p {
   font-size: 1.2rem;
 }
 
-.project .projCard .projBtn {
+.project .projContainer .cardContainer .projCard .projBtn {
   background: #4d5d83;
   color: #eceef4;
   border-radius: 0.4rem;
@@ -310,7 +386,7 @@
   font-size: 1rem;
 }
 
-.project .projCard .projBtn:hover {
+.project .projContainer .cardContainer .projCard .projBtn:hover {
   background: #d40f0f;
   font-weight: 500;
   cursor: pointer;
@@ -334,10 +410,12 @@
 }
 
 .project .svgContainer .bgCircles1 {
+  display: none;
   margin-left: 1.5rem;
 }
 
 .project .svgContainer .bgCircles2 {
+  display: none;
   margin-right: 1.5rem;
 }
 
@@ -403,7 +481,7 @@
   margin-bottom: 1.5rem;
   text-align: center;
   font-size: 3rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 
 .contact form .leftBox p {
@@ -568,8 +646,14 @@ footer .footContainer ul .socials:hover, footer .footContainer ul a:hover {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .landing .mainTxt {
+    text-align: center;
+  }
   .landing .mainTxt h1 {
     font-size: 5rem;
+  }
+  .landing .mainTxt h2 {
+    font-size: 2rem;
   }
   .landing .cpuPhone {
     width: 300px;
@@ -620,7 +704,7 @@ footer .footContainer ul .socials:hover, footer .footContainer ul a:hover {
   /*             ------------------------------   Mobile Project view   ------------------------------            */
 }
 
-@media screen and (orientation: landscape) and (max-height: 395px) {
+@media screen and (orientation: landscape) and (max-height: 95px) {
   .formContainer form .leftBox {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
