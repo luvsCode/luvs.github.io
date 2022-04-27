@@ -26,7 +26,7 @@
         display: flex;
         height: 10vh;   
         min-width: 100vw;
-        
+        //font-size: 3.5rem;
         align-items: center;
         background: rgba(33, 40, 56, 0.85);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -38,7 +38,7 @@
             list-style: none;
             padding: .8rem;
             margin-right: 2rem;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
            
             a{
                 text-decoration: none;
@@ -159,15 +159,30 @@
 
     .aboutTitle{
         width: 100%;
-
+        display: none;
         h1{
             font-size: 3rem;
             margin: 2rem;
         }
     }
 
+    .aboutCard{
+        
+        display: flex;
+        margin-top: 4rem;
+       // flex-wrap: wrap;
+        justify-content: space-evenly;
+        //flex-direction: row;
+    }
+
     img{
-        display: none;
+        border-radius: 0.8rem;
+        height: 100%;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(236, 238, 244, 0.3);
+        border-radius: 0.8rem; 
     }
 
     .svgContainer{
@@ -175,8 +190,10 @@
     }
 
     .aboutTxt{
+       // border: 1px solid red;
         display: flex;
         text-align: left;
+        justify-content: center;
         flex-direction: column;
         margin: 3rem;
 
@@ -644,7 +661,14 @@ footer{
      }
       /*             ------------------------------   Mobile About view   ------------------------------            */
  
-     
+     .about
+     {
+         .aboutCard{
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+         }
+     }
       
        /*             ------------------------------   Mobile Project view   ------------------------------            */
  

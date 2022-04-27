@@ -44,7 +44,7 @@
   list-style: none;
   padding: .8rem;
   margin-right: 2rem;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 
 .navContainer ul li a {
@@ -243,6 +243,7 @@
 
 .about .aboutTitle {
   width: 100%;
+  display: none;
 }
 
 .about .aboutTitle h1 {
@@ -250,8 +251,25 @@
   margin: 2rem;
 }
 
+.about .aboutCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .about img {
-  display: none;
+  border-radius: 0.8rem;
+  height: 100%;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(236, 238, 244, 0.3);
+  border-radius: 0.8rem;
 }
 
 .about .svgContainer {
@@ -263,6 +281,9 @@
   display: -ms-flexbox;
   display: flex;
   text-align: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -659,6 +680,18 @@ footer .footContainer ul .socials:hover, footer .footContainer ul a:hover {
     width: 300px;
   }
   /*             ------------------------------   Mobile About view   ------------------------------            */
+  .about .aboutCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   /*             ------------------------------   Mobile Project view   ------------------------------            */
   .projContainer {
     -webkit-box-orient: vertical;
