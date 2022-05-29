@@ -16,12 +16,9 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-let vw = window.innerWidth * 0.01;
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vw', `${vw}px`);
-document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-tl.fromTo('.mainTxt', {opacity: 0}, {opacity: 1, duration: 2.5})
+
+tl.fromTo('.mainTxt', {opacity: 0}, {opacity: 1, duration: 3.5})
 tl.fromTo('.bgCircles', {y:0}, {y:-20, yoyo: true, repeat: -1, duration: 0.75}, "<")
 tl.fromTo('.bgCircles1', {y:50}, {y:-100, yoyo: true, repeat: -1, duration: 0.75}, "<")
 tl.fromTo('.bgCircles2', {y:50}, {y:-100, yoyo: true, repeat: -1, duration: 0.75}, "<")
@@ -38,6 +35,36 @@ toggleButton.addEventListener('click', () =>
   }
 })
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 1,
+  rootMargin: "0px 0px -100px 0px"
+}
+
+const appearOnScroll = new IntersectionObserver(
+  function(entries, appearOnScroll)
+  {
+    entries.forEach(entry =>
+      {
+        if(!entry.isIntersecting)
+        {
+          return;
+        }
+        else
+        {
+          entry.target.classList.add('appear');
+          appearOnScroll.unobserve(entry.target);
+        }
+      })
+  },
+  appearOptions);
+
+  faders.forEach(fader =>
+    {
+      appearOnScroll.observe(fader);
+    })
 
 containers.forEach((container) =>{
 
@@ -97,12 +124,6 @@ containers.forEach((container) =>{
     })
 
   })
-
-
-  
-
-
-
 
 //COLORIZE FUNCTION
 function colorize(color, line, placeholder) {

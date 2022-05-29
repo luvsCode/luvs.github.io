@@ -28,7 +28,7 @@
         min-width: 100vw;
         //font-size: 3.5rem;
         align-items: center;
-        background: rgba(33, 40, 56, 0.85);
+        background: rgba(33, 40, 56, 0.90);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
@@ -83,7 +83,7 @@
     
     
     
-    background: #212838;
+    background: #eceef4;
     
     .mainTxt{
         display: flex;
@@ -91,7 +91,7 @@
         //align-items: center;
         text-align: left;
         justify-content: center;
-        color: #eceef4;
+        color: #212838;
         //margin-right: 5rem;
         //border: 1px solid red;
         h1{
@@ -107,7 +107,7 @@
           // text-align: left;
           line-height: 1.5;
             padding: 1rem;
-            color: #eceef4;
+            //color: #eceef4;
             font-size: 2.5rem;
         }
 
@@ -150,12 +150,13 @@
 .about{
     min-height: 80vh;
     min-width: 100vw;
-    background: #eceef4;
+   background: #eceef4;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem;
+  
 
     .aboutTitle{
         width: 100%;
@@ -166,6 +167,7 @@
         }
     }
 
+    
     .aboutCard{
         
         display: flex;
@@ -175,15 +177,17 @@
         //flex-direction: row;
     }
 
-    img{
-        border-radius: 0.8rem;
-        height: 100%;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(236, 238, 244, 0.3);
-        border-radius: 0.8rem; 
+    
+    .fromLeft{
+
     }
+
+    .mobilePic{
+        display: none;
+    }
+        
+    
+    
 
     .svgContainer{
         display: none;
@@ -326,7 +330,18 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
+
+        .fade-in{
+            opacity: 0;
+            transition: opacity 250ms ease-in;
+        }
+
+        .fade-in.appear{
+            opacity: 1;
+        }
+
         .projCard{
+            //opacity: 0;
             width: 500px;
             height: 300px;
             text-align: center;
@@ -341,6 +356,8 @@
              -webkit-backdrop-filter: blur(5px);
              border: 1px solid rgba(236, 238, 244, 0.3);
              border-radius: 0.8rem;
+
+            
              /*
              &:hover{
                  height: 300px;
@@ -663,10 +680,22 @@ footer{
  
      .about
      {
+
+        .profileSvg{
+            display: none;
+        }
+
+        .mobilePic{
+            display: block;
+        }
          .aboutCard{
              flex-direction: column;
              justify-content: center;
              align-items: center;
+         }
+
+         .aboutTxt{
+             text-align: center;
          }
      }
       
