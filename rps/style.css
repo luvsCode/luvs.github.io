@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #00216ea0;
+}
+
+.score {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #eceef4;
+  background: rgba(33, 40, 56, 0.85);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(33, 40, 56, 0.3);
+}
+
+.intro {
+  display: none;
+  border: 1px solid green;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.match {
+  background: #eceef4;
+  -webkit-transition: opacity 0.5s ease 0.5s;
+  transition: opacity 0.5s ease 0.5s;
+  width: 100%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #eceef4;
+}
+
+.match .winner {
+  color: darkblue;
+  margin-top: auto;
+}
+
+.match .matchContainer {
+  border: 1px solid red;
+  color: #212838;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.match .matchContainer .playerTxt {
+  font-size: 2rem;
+}
+
+.match .matchContainer .cpuTxt {
+  font-size: 2rem;
+}
+
+.match .elements {
+  border: 1px solid pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: auto;
+  background: rgba(33, 40, 56, 0.85);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(33, 40, 56, 0.3);
+  width: 100%;
+}
+
+.match .elements .water {
+  background: #0f7fd4;
+  color: #eceef4;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border-style: none;
+  margin: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.match .elements .earth {
+  background: #0fd464;
+  color: #eceef4;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  cursor: pointer;
+  border-style: none;
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+.match .elements .fire {
+  background: #d40f0f;
+  color: #eceef4;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  cursor: pointer;
+  border-style: none;
+  margin: 1rem;
+  font-size: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

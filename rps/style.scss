@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+.container{
+    //border: 1px solid red;
+    width: 100vw;
+    height: 100vh;
+    background: #00216ea0;
+    //display: flex;
+}
+
+.score{
+    height: 20vh;
+    //width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #eceef4;
+    background: rgba(33, 40, 56, 0.85);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(33, 40, 56, 0.3);
+       
+    //border: 1px solid green;
+}
+
+.intro{
+    display: none;
+    border: 1px solid green;
+    //display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.match{
+    //position: absolute;
+   // border: 1px solid rgb(190, 60, 188);
+    background: #eceef4;
+    //top: 50%;
+    //left: 50%;
+    //transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.5s;
+   width: 100%;
+   height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #eceef4;
+
+    .winner{
+        color: darkblue;
+        margin-top: auto;
+    }
+
+    .matchContainer{
+        border: 1px solid red;
+        color: #212838;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        .playerTxt{
+            font-size: 2rem;
+        }
+
+        .cpuTxt{
+            font-size: 2rem;
+        }
+    }
+
+    .elements{
+        border: 1px solid pink;
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+        background: rgba(33, 40, 56, 0.85);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(33, 40, 56, 0.3);
+       
+        width: 100%;
+        
+
+        .water{
+            background: #0f7fd4;
+            color: #eceef4;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            border-style: none;
+           // padding: 0.8rem 2rem;
+            margin: 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .earth{
+            background: #0fd464;
+            color: #eceef4;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            cursor: pointer;
+            border-style: none;
+            //padding: 0.8rem 2rem;
+            margin: 1rem;
+           // margin-left: 35%;
+            font-size: 1rem;
+        }
+
+        .fire{
+            background: #d40f0f;
+            color: #eceef4;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            cursor: pointer;
+            border-style: none;
+            //padding: 0.8rem 2rem;
+            margin: 1rem;
+            //margin-left: 35%;
+            font-size: 1rem;
+        }
+    }
+
+}
